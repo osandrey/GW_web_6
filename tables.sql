@@ -1,4 +1,4 @@
--- Table: companies
+
 DROP TABLE IF EXISTS groups;
 CREATE TABLE groups (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -14,14 +14,14 @@ CREATE TABLE students (
       ON UPDATE CASCADE
 );
 
--- Table: employees
+
 DROP TABLE IF EXISTS teachers;
 CREATE TABLE teachers (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     fullname VARCHAR(100) UNIQUE NOT NULL
 );
 
--- Table: payments
+
 DROP TABLE IF EXISTS classes;
 CREATE TABLE classes (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -31,7 +31,7 @@ CREATE TABLE classes (
       ON UPDATE CASCADE
 );
 
--- Table: payments
+
 DROP TABLE IF EXISTS marks;
 CREATE TABLE marks (
     id INTEGER PRIMARY KEY AUTOINCREMENT,

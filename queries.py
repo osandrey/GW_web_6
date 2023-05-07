@@ -108,8 +108,18 @@ JOIN classes c ON c.id = m.class_id
 WHERE s.id = 1 AND t.id = 4
 """
 
+"""Средний балл, который определенный преподаватель ставит определенному студенту."""
 
-queries_dict = {1:sql_1, 2:sql_2, 3:sql_3, 4:sql_4, 5:sql_5, 6:sql_6, 7:sql_7, 8:sql_8, 9:sql_9, 10:sql_10}
+sql_11 = """
+SELECT t.fullname, s.fullname, c.class_name, ROUND(AVG(m.mark), 2) 
+FROM marks m
+JOIN teachers t ON t.id = c.teacher_id
+JOIN students s ON s.id = m.student_id
+JOIN classes c ON c.id = m.class_id
+WHERE t.id = 1 AND s.id = 4
+"""
+
+queries_dict = {1:sql_1, 2:sql_2, 3:sql_3, 4:sql_4, 5:sql_5, 6:sql_6, 7:sql_7, 8:sql_8, 9:sql_9, 10:sql_10, 11:sql_11}
 
 
 if __name__ =="__main__":
